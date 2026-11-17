@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health FPTU Students</title>
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+.hero{
+    height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero video{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    top:0;
+    left:0;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    font-size:5rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    padding:15px 35px;
+    background:#3b82f6;
+    border:none;
+    border-radius:50px;
+    color:white;
+    text-decoration:none;
+    transition:.4s;
+}
+
+.btn:hover{
+    background:#2563eb;
+}
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:50px;
+}
+
+.about{
+    text-align:center;
+    line-height:1.8;
+}
+
+.members{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 15px 35px rgba(59,130,246,.3);
+}
+
+.card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.project{
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.project:hover{
+    transform:scale(1.05);
+}
+
+.counter{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:50px;
+    text-align:center;
+}
+
+.number{
+    font-size:3rem;
+    color:#3b82f6;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:#020617;
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+    <!-- THAY VIDEO CỦA BẠN -->
+    <video autoplay muted loop>
+        <source src="https://cdn.coverr.co/videos/coverr-working-with-a-laptop-5176/1080p.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h1 id="title"></h1>
+        <p>Innovating Healthcare For Students</p>
+
+        <a href="#about" class="btn">
+            Explore
+        </a>
+    </div>
+
+</section>
+
+<section id="about">
+
+    <h2 class="section-title" data-aos="fade-up">
+        About Us
+    </h2>
+
+    <div class="about" data-aos="fade-up">
+        Chúng tôi là nhóm Health FPTU Students,
+        phát triển các giải pháp hỗ trợ sức khỏe
+        và nâng cao chất lượng cuộc sống cho sinh viên.
+    </div>
+
+</section>
+
+<section>
+
+    <h2 class="section-title" data-aos="zoom-in">
+        Team Members
+    </h2>
+
+    <div class="members">
+
+        <div class="card" data-aos="fade-right">
+            <img src="https://picsum.photos/500/600?1">
+            <div class="card-content">
+                <h3>Thành viên 1</h3>
+                <p>Leader</p>
+            </div>
+        </div>
+
+        <div class="card" data-aos="fade-up">
+            <img src="https://picsum.photos/500/600?2">
+            <div class="card-content">
+                <h3>Thành viên 2</h3>
+                <p>Developer</p>
+            </div>
+        </div>
+
+        <div class="card" data-aos="fade-left">
+            <img src="https://picsum.photos/500/600?3">
+            <div class="card-content">
+                <h3>Thành viên 3</h3>
+                <p>Designer</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <h2 class="section-title" data-aos="fade-up">
+        Projects
+    </h2>
+
+    <div class="projects">
+
+        <div class="project" data-aos="zoom-in">
+            <h3>Health Tracker</h3>
+            <p>Ứng dụng theo dõi sức khỏe sinh viên.</p>
+        </div>
+
+        <div class="project" data-aos="zoom-in">
+            <h3>Mental Care</h3>
+            <p>Hỗ trợ sức khỏe tinh thần.</p>
+        </div>
+
+        <div class="project" data-aos="zoom-in">
+            <h3>Nutrition Advisor</h3>
+            <p>Tư vấn dinh dưỡng thông minh.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <h2 class="section-title" data-aos="fade-up">
+        Statistics
+    </h2>
+
+    <div class="counter">
+
+        <div>
+            <div class="number" data-target="5">0</div>
+            <p>Members</p>
+        </div>
+
+        <div>
+            <div class="number" data-target="10">0</div>
+            <p>Projects</p>
+        </div>
+
+        <div>
+            <div class="number" data-target="100">0</div>
+            <p>Users</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © Health FPTU Students
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+
+AOS.init({
+    duration:1200
+});
+
+const text = "HEALTH FPTU STUDENTS";
+let i = 0;
+
+function typing(){
+    if(i < text.length){
+        document.getElementById("title").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing,100);
+    }
+}
+typing();
+
+const counters = document.querySelectorAll('.number');
+
+counters.forEach(counter => {
+
+    const updateCounter = () => {
+
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+
+        const increment = target / 100;
+
+        if(count < target){
+
+            counter.innerText =
+              Math.ceil(count + increment);
+
+            setTimeout(updateCounter,20);
+
+        }else{
+            counter.innerText = target;
+        }
+    };
+
+    updateCounter();
+
+});
+
+</script>
+
+</body>
+</html>
